@@ -26,7 +26,14 @@ pipeline {
 
     stage('Depoly') {
       steps {
+        input(message: 'are you sure to  deploy', ok: 'yes')
         echo 'Depoly complated '
+      }
+    }
+
+    stage('notify new build') {
+      steps {
+        echo 'notify complated'
       }
     }
 
