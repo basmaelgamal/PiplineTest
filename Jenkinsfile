@@ -24,16 +24,21 @@ pipeline {
       }
     }
 
-    stage('Depoly') {
+    stage('Test3') {
       steps {
-        input(message: 'are you sure to  deploy', ok: 'yes')
-        echo 'Depoly complated '
+        echo 'Test3  complated '
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        echo 'Deploy complated'
       }
     }
 
     stage('notify new build') {
       steps {
-        echo 'notify complated'
+        echo 'notify completed'
       }
     }
 
